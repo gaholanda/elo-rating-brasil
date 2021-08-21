@@ -37,7 +37,7 @@ rounds.forEach((round) => {
 
       const matchData = `${fDate};${home};${fScore};${away};SERIE_A`;
 
-      fs.appendFileSync(File, matchData + "\r");
+      fs.appendFileSync(File, `\r${matchData}`);
     }
   });
 });

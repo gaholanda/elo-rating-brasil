@@ -1,6 +1,6 @@
 const RootDatabaseFolder = "./admin/database";
 const MatchsCSVHeader =
-  "date;home_team_id;home_team_goals;away_team_goals;away_team_id;tournament_id\r";
+  "date;home_team_id;home_team_goals;away_team_goals;away_team_id;tournament_id";
 
 module.exports = {
   RootDatabaseFolder,

@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   height: 20px;
   padding: 1rem;
   background-color: var(--primary-color);
@@ -13,5 +13,6 @@
     font-weight: bold;
     color: var(--secondary-color);
     text-transform: uppercase;
+    text-align: center;
   }
 }

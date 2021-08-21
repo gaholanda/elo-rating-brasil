@@ -28,9 +28,9 @@ body {
   align-items: center;
   justify-content: center;
   margin: auto;
-  width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   padding: 1rem;
 }
 
 @import "./header";
+@import "./list_teams";

@@ -6,7 +6,6 @@ import { TeamsData } from "../../../admin/config";
 type Team = {
   id: string;
   name: string;
-  logo: string;
 };
 
 type MessageError = {
