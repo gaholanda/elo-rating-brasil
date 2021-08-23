@@ -19,7 +19,9 @@ export const ListTeams: React.FC = () => {
               <p className="list-teams--team-pos">{i + 1}</p>
               <p className="list-teams--team-name">Team Name</p>
               <p className="list-teams--team-rate">1900</p>
-              <p className="list-teams--team-diff">+12</p>
+              <p className="list-teams--team-diff list-teams--team-diff-positive">
+                +12
+              </p>
             </div>
             <div className="list-teams--separator"></div>
           </Fragment>
@@ -28,7 +30,9 @@ export const ListTeams: React.FC = () => {
           <p className="list-teams--team-pos">11</p>
           <p className="list-teams--team-name">Team Name</p>
           <p className="list-teams--team-rate">90</p>
-          <p className="list-teams--team-diff">+12</p>
+          <p className="list-teams--team-diff list-teams--team-diff-negative">
+            -12
+          </p>
         </div>
       </div>
     </div>

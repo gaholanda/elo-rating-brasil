@@ -66,6 +66,16 @@
     &-name {
       flex: 4;
     }
+
+    &-diff {
+      &-positive {
+        color: var(--positive-color);
+      }
+
+      &-negative {
+        color: var(--negative-color);
+      }
+    }
   }
 
   &--separator {
