@@ -4,7 +4,7 @@ export const ListTeams: React.FC = () => {
   return (
     <div className="list-teams">
       <div className="list-teams--header">
-        <p>Ratings e resultados até 20/08/2021</p>
+        <p>Resultados até 20/08/2021</p>
         <div className="list-teams--titles">
           <p className="list-teams--titles-pos">Pos</p>
           <p className="list-teams--titles-name">Time</p>

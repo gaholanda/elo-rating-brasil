@@ -5,6 +5,9 @@
   --heavy-light: #ffffff;
   --heavy-default: #f2f2f2;
   --heavy-dark: #000000;
+  --button-active: #023db3;
+  --button-default: #cccccc;
+  --button-hover: #dbdbdb;
 }
 
 * {
@@ -34,3 +37,4 @@ body {
 
 @import "./header";
 @import "./list_teams";
+@import "./menu";

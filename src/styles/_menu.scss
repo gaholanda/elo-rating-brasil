@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &--button {
+    flex: 1;
+    cursor: pointer;
+    border: none;
+    background-color: var(--heavy-default);
+    padding: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+    &:hover {
+      background-color: var(--button-hover);
+      color: var(--heavy-dark);
+    }
+
+    &-active {
+      background-color: var(--alternative-color);
+      color: var(--heavy-light);
+    }
+  }
+}
