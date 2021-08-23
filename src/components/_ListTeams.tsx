@@ -6,10 +6,18 @@ export const ListTeams: React.FC = () => {
       <div className="list-teams--header">
         <p>Resultados até 20/08/2021</p>
         <div className="list-teams--titles">
-          <p className="list-teams--titles-pos">Pos</p>
-          <p className="list-teams--titles-name">Time</p>
-          <p className="list-teams--titles-rate">Rating</p>
-          <p className="list-teams--titles-diff">+/-</p>
+          <p className="list-teams--titles-pos" title="Posição">
+            Pos
+          </p>
+          <p className="list-teams--titles-name" title="Time">
+            Time
+          </p>
+          <p className="list-teams--titles-rate" title="Rating">
+            R
+          </p>
+          <p className="list-teams--titles-diff" title="Evolução">
+            +/-
+          </p>
         </div>
       </div>
       <div className="list-teams--ratings">
