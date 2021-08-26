@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 
 import "../styles/app.scss";
-import { Header } from "../components";
+import { Header, Menu } from "../components";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,6 +14,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Header />
+      <Menu />
       <Component {...pageProps} />
     </>
   );

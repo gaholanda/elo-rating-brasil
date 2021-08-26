@@ -21,7 +21,7 @@ export const ListTeams: React.FC = () => {
         </div>
       </div>
       <div className="list-teams--ratings">
-        {Array.from({ length: 10 }, () => "").map((_, i) => (
+        {Array.from({ length: 20 }, () => "").map((_, i) => (
           <Fragment key={i}>
             <div className="list-teams--team">
               <p className="list-teams--team-pos">{i + 1}</p>
