@@ -1,0 +1,12 @@
+.view-team {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.list-teams--team.open-view-team + .view-team {
+  padding: 1rem;
+  height: 50vh;
+}

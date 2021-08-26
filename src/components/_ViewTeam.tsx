@@ -1,7 +1,7 @@
 export const ViewTeam: React.FC = () => {
   return (
-    <div>
-      <h1>View Team!</h1>
+    <div className="view-team">
+      <p>View Team!</p>
     </div>
   );
 };

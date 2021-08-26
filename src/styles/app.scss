@@ -39,6 +39,17 @@ body {
   padding: 2rem 1rem;
 }
 
+.until-date {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+
+  p {
+    padding: 1rem;
+  }
+}
+
 @import "./header";
-@import "./list_teams";
 @import "./menu";
+@import "./list_teams";
+@import "./view_team";

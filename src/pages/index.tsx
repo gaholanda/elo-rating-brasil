@@ -5,6 +5,9 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <ListTeams />
+      <div className="until-date">
+        <p>Resultados até 20/08/2021</p>
+      </div>
     </div>
   );
 };

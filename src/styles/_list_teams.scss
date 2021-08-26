@@ -11,8 +11,7 @@
     font-weight: bold;
     color: var(--heavy-light);
     text-align: center;
-    padding: 1rem 0 0;
-    background-color: var(--alternative-color);
+    background-color: var(--secondary-color);
   }
 
   &--titles {
@@ -21,10 +20,9 @@
     align-items: center;
     justify-content: space-between;
     height: 30px;
-    padding: 0 1rem;
-    margin-top: 1rem;
-    background-color: var(--secondary-color);
+    padding: 0.2rem 1rem;
     color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
 
     &-pos,
     &-rate,
