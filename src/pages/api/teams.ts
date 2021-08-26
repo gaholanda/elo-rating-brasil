@@ -1,23 +1,13 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import CSV2JSON from "convert-csv-to-json";
 import { TeamsData } from "../../../admin/config";
+import { MessageErrorType, TeamType } from "../../types";
 
-type Team = {
-  id: string;
-  name: string;
-};
-
-type MessageError = {
-  status: number;
-  message: string;
-};
-
-const Teams: Array<Team> = CSV2JSON.getJsonFromCsv(TeamsData);
+const Teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Array<Team> | Team | MessageError>
+  res: NextApiResponse<Array<TeamType> | TeamType | MessageErrorType>
 ) {
   const { query } = req;
 

@@ -45,9 +45,7 @@ function CreateRanking() {
   let rankings = [];
 
   let fileExists = FS.existsSync(ranking_file);
-  if (!fileExists) {
-    FS.writeFileSync(ranking_file, `id;Ro;Rn;matches;wins;draws;losses\n`);
-  }
+  FS.writeFileSync(ranking_file, `id;Ro;Rn;matches;wins;draws;losses\n`);
 
   teams.map((team) => {
     if (teamRatingsFileExists(team.id)) {

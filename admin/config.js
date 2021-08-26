@@ -10,5 +10,5 @@ module.exports = {
   MatchesFolder: `${RootDatabaseFolder}/matches`,
   TeamsRatingsFolder: `${RootDatabaseFolder}/ratings/teams`,
   RatingFolder: `${RootDatabaseFolder}/ratings`,
-  LastRatingData: "ratings.csv",
+  RatingsData: `${RootDatabaseFolder}/ratings/ratings.csv`,
 };
