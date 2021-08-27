@@ -1,4 +1,4 @@
-date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn;
+date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn
 14/04/2018;draw;VIT;1500;2;2;FLA;1500;SERIE_A;1486
 22/04/2018;loss;VIT;1486;1;2;ATL;1450;SERIE_A;1431
 30/04/2018;loss;VIT;1431;1;2;AME;1504;SERIE_A;1391

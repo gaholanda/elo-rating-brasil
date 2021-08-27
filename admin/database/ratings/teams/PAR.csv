@@ -1,4 +1,4 @@
-date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn;
+date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn
 16/04/2018;loss;PAR;1500;0;1;SAO;1500;SERIE_A;1450
 22/04/2018;loss;PAR;1450;0;4;COR;1536;SERIE_A;1398
 29/04/2018;loss;PAR;1398;1;2;SPO;1441;SERIE_A;1340

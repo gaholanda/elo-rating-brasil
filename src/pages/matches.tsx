@@ -1,4 +1,6 @@
-const Matches: React.FC = () => {
+import { NextPage } from "next";
+
+const Matches: NextPage = () => {
   return (
     <div className="container">
       <h1>Jogos</h1>

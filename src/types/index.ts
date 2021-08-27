@@ -27,6 +27,7 @@ export type TeamHistoryType = {
   team_Rn: string;
   team_name?: string;
   opp_team_name?: string;
+  timestamp?: number;
 };
 
 export type MessageErrorType = {

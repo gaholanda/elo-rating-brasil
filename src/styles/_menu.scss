@@ -18,10 +18,10 @@
     padding: 0.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--alternative-color);
 
     &:hover {
       background-color: var(--button-hover);
-      color: var(--heavy-dark);
     }
 
     &-active,

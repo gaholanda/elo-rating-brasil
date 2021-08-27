@@ -26,7 +26,7 @@ function updateTeamRatings(team_id, content) {
   if (!fileExists) {
     FS.writeFileSync(
       file,
-      `date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn;\n${content}`
+      `date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn\n${content}`
     );
   } else {
     FS.appendFileSync(file, `\n${content}`);

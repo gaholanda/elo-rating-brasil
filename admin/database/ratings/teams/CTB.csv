@@ -1,4 +1,4 @@
-date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn;
+date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn
 08/08/2020;loss;CTB;1500;0;1;INT;1257;SERIE_A;1412
 12/08/2020;loss;CTB;1412;0;1;BAH;1211;SERIE_A;1336
 15/08/2020;loss;CTB;1336;0;1;FLA;1436;SERIE_A;1286

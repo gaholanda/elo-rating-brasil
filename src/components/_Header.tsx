@@ -1,5 +1,9 @@
+import Link from "next/link";
+
 export const Header: React.FC = () => (
   <header className="header">
-    <p>Elo Rating Brasil</p>
+    <Link href="/">
+      <p>Elo Rating Brasil</p>
+    </Link>
   </header>
 );

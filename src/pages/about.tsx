@@ -1,4 +1,6 @@
-const About: React.FC = () => {
+import { NextPage } from "next";
+
+const About: NextPage = () => {
   return (
     <div className="container">
       <h1>Sobre</h1>

@@ -1,4 +1,4 @@
-date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn;
+date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;tournament_id;team_Rn
 28/04/2019;loss;CSA;1500;0;4;CEA;1361;SERIE_A;1431
 01/05/2019;draw;CSA;1431;1;1;PAL;1672;SERIE_A;1450
 05/05/2019;draw;CSA;1450;0;0;SAN;1387;SERIE_A;1428
