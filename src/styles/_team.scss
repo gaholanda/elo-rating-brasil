@@ -65,6 +65,14 @@
   }
 
   &--chart {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--heavy-default);
+
+    &-title {
+      text-align: center;
+      margin: 1rem auto;
+    }
   }
 }

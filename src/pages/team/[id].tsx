@@ -1,4 +1,6 @@
 import { NextPage } from "next";
+import { Line } from "react-chartjs-2";
+
 import { RatingType, TeamHistoryType, TeamType } from "../../types";
 
 interface TeamProps {
@@ -11,6 +13,31 @@ interface TeamProps {
 }
 
 const Team: NextPage<TeamProps> = ({ team }) => {
+  const { history } = team;
+
+  const labels = Array.from(
+    { length: history.length },
+    (v, k) => history[k].date
+  );
+
+  const chartData = Array.from(
+    { length: history.length },
+    (v, k) => history[k].team_Rn
+  );
+
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        label: "Rating",
+        data: chartData,
+        fill: false,
+        backgroundColor: "#009c3b",
+        borderColor: "#ffdf00",
+      },
+    ],
+  };
+
   return (
     <div className="container">
       <div className="team">
@@ -42,7 +69,10 @@ const Team: NextPage<TeamProps> = ({ team }) => {
               </div>
             </div>
           </div>
-          <div className="team--chart"></div>
+          <div className="team--chart">
+            <h3 className="team--chart-title">Evolução de ratings</h3>
+            <Line data={data} width={400} height={400} />
+          </div>
         </div>
       </div>
     </div>
@@ -88,6 +118,7 @@ export async function getStaticProps({ params }: GetStaticProps) {
 
     return {
       ...rating,
+      team_Rn: parseInt(rating.team_Rn),
       team_name: getTeam.name,
       opp_team_name: allTeams.filter(
         (team) => team.id === rating.opp_team_id
@@ -102,7 +133,10 @@ export async function getStaticProps({ params }: GetStaticProps) {
         id: getTeam.id,
         name: getTeam.name,
         rating: getTeamRating,
-        history: getTeamHistory.sort((a, b) => b.timestamp - a.timestamp),
+        history: getTeamHistory.slice(
+          getTeamHistory.length - 15,
+          getTeamHistory.length - 1
+        ),
       },
     },
   };
