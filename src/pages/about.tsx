@@ -25,17 +25,13 @@ const About: NextPage = () => {
 
         <h3>Como é feito o cálculo?</h3>
         <br />
-        <h3>Rn = (Ro + T) + K × (W - We)</h3>
+        <h3>Rn = Ro + K × (W - We)</h3>
 
         <p>
           <strong>Rn</strong>, o novo rating;
         </p>
         <p>
           <strong>Ro</strong>, o rating antes da partida;
-        </p>
-        <p>
-          <strong>T</strong>, a metade da quantidade de partidas disputadas pelo
-          time;
         </p>
         <p>
           <strong>K</strong>, o peso da Série A que é 100.
