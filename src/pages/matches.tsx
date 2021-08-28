@@ -15,13 +15,17 @@ const Matches: NextPage<MatchesProps> = ({ teams }) => {
     if (team) {
       setShowMatches(true);
       setMatches(teams.filter((_team) => _team.id == team.id)[0].history);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }, [team]);
 
   return (
     <div className="container">
       {showMatches && (
-        <div className="matches--back">
+        <div className="button-back">
           <button onClick={() => setShowMatches(false)}>Voltar</button>
         </div>
       )}
@@ -57,7 +61,13 @@ const Matches: NextPage<MatchesProps> = ({ teams }) => {
                 className="matches--match"
               >
                 <div
-                  key={`team-${match.team_id}`}
+                  className="matches--match-logo"
+                  title={match.opp_team_name}
+                  style={{
+                    backgroundImage: `url(/images/teams/${match.team_id}.png)`,
+                  }}
+                />
+                <div
                   className="matches--match-logo"
                   title={match.opp_team_name}
                   style={{
@@ -65,17 +75,21 @@ const Matches: NextPage<MatchesProps> = ({ teams }) => {
                   }}
                 />
                 <div className="matches--match-info">
-                  <span className={`tag ${match.result}`} />
-                  <span>
-                    <strong>Data</strong> {match.date}
-                  </span>
-                  <span>
-                    <strong>Placar</strong> {match.team_goals}x
-                    {match.opp_team_goals}
-                  </span>
-                  <span>
-                    <strong>Rating</strong> {match.team_Rn}
-                  </span>
+                  <div className={`tag ${match.result}`} />
+                  <div className="matches--match-data">
+                    <label>Data</label>
+                    <span>{match.date}</span>
+                  </div>
+                  <div className="matches--match-data">
+                    <label>Placar</label>
+                    <span>
+                      {match.team_goals}x{match.opp_team_goals}
+                    </span>
+                  </div>
+                  <div className="matches--match-data">
+                    <label>Rating</label>
+                    <span>{match.team_Rn}</span>
+                  </div>
                 </div>
               </div>
             ))}
@@ -94,9 +108,27 @@ export async function getStaticProps() {
 
   const teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
   const teamsWithHistory: Array<MatchHistoryType> = teams.map((team) => {
+    const teamHistory = CSV2JSON.getJsonFromCsv(
+      `${TeamsRatingsFolder}/${team.id}.csv`
+    );
+    const teamHistoryWithTimestamp: Array<TeamHistoryType> = teamHistory.map(
+      (history: TeamHistoryType) => {
+        const date = history.date.split("/");
+        const timestamp = new Date(
+          `${date[2]}/${date[1]}/${date[0]}`
+        ).getTime();
+        return {
+          ...history,
+          timestamp: timestamp,
+        };
+      }
+    );
+
     return {
       ...team,
-      history: CSV2JSON.getJsonFromCsv(`${TeamsRatingsFolder}/${team.id}.csv`),
+      history: teamHistoryWithTimestamp.sort(
+        (a, b) => b.timestamp - a.timestamp
+      ),
     };
   });
 

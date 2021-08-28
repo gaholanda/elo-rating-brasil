@@ -40,7 +40,10 @@ const About: NextPage = () => {
         <p>
           <strong>K</strong>, o peso da Série A que é 100.
           <br />
-          Esse valor ainda sofre um ajuste de acordo com a quantidade de gols;
+          Esse valor é acrescido pela <strong>metade</strong> se o jogo é
+          vencido por 2 gols; em <strong>3/4</strong> se forem 3 gols; e por{" "}
+          <strong>3/4 + (N-3)/8</strong> se forem 4 gols, ou mais; onde N é a
+          diferença de gols.
         </p>
         <p>
           <strong>W</strong>, o resultado da partida (vitória = 1, empate = 0.5,

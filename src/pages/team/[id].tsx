@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import { Line } from "react-chartjs-2";
 
 import { RatingType, TeamHistoryType, TeamType } from "../../types";
@@ -18,7 +19,7 @@ const Team: NextPage<TeamProps> = ({ team }) => {
   const labels = Array.from(
     { length: history.length },
     (v, k) =>
-      `${history[k].date} - ${history[k].team_goals}x${history[k].opp_team_goals} ${history[k].opp_team_id}`
+      `${history[k].team_goals}x${history[k].opp_team_goals} ${history[k].opp_team_id}`
   );
 
   const chartData = Array.from(
@@ -41,6 +42,11 @@ const Team: NextPage<TeamProps> = ({ team }) => {
 
   return (
     <div className="container">
+      <div className="button-back">
+        <Link href="/">
+          <button>Voltar</button>
+        </Link>
+      </div>
       <div className="team">
         <div className="team--header">
           <h1 className="team--title">{team.name}</h1>
@@ -71,7 +77,7 @@ const Team: NextPage<TeamProps> = ({ team }) => {
             </div>
           </div>
           <div className="team--chart">
-            <h3 className="team--chart-title">Evolução de ratings</h3>
+            <h3 className="team--chart-title">Últimos jogos</h3>
             <Line data={data} width={400} height={400} />
           </div>
         </div>
