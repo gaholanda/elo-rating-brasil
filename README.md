@@ -9,5 +9,5 @@ Projeto baseado na ideia do [World Football Elo Ratings](https://www.eloratings.
 
 ### Visite a página
 
-(Elo Rating Brasil)[https://elo-rating-brasil.vercel.app]
+[Elo Rating Brasil](https://elo-rating-brasil.vercel.app)
 
