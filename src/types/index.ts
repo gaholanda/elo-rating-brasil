@@ -45,3 +45,9 @@ export type MatchType = {
   home_team_name?: string;
   away_team_name?: string;
 };
+
+export type MatchHistoryType = {
+  id: string;
+  name: string;
+  history: Array<TeamHistoryType>;
+};

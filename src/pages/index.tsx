@@ -18,7 +18,7 @@ export default Home;
 
 export async function getStaticProps() {
   const CSV2JSON = require("convert-csv-to-json");
-  const { RatingsData, TeamsData } = require("../../admin/config");
+  const { RatingsData, TeamsData } = require("../admin/config");
 
   const ratings: Array<RatingType> = CSV2JSON.getJsonFromCsv(RatingsData);
   const teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);

@@ -90,7 +90,7 @@ interface GetStaticProps {
 }
 
 export async function getStaticPaths() {
-  const { TeamsPaths } = require("../../../admin/config");
+  const { TeamsPaths } = require("../../admin/config");
 
   return {
     paths: TeamsPaths,
@@ -106,7 +106,7 @@ export async function getStaticProps({ params }: GetStaticProps) {
     RatingsData,
     TeamsData,
     TeamsRatingsFolder,
-  } = require("../../../admin/config");
+  } = require("../../admin/config");
 
   const allTeams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
   const allRatings: Array<RatingType> = CSV2JSON.getJsonFromCsv(RatingsData);

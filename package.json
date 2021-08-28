@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "matches": "node ./admin/elo/matches.js",
-    "ratings": "node ./admin/elo/ratings.js",
-    "br-table": "node ./admin/convert-br-table.js"
+    "matches": "node ./src/admin/elo/matches.js",
+    "ratings": "node ./src/admin/elo/ratings.js",
+    "br-table": "node ./src/admin/convert-br-table.js"
   },
   "dependencies": {
     "chart.js": "^3.5.1",
