@@ -89,6 +89,15 @@ interface GetStaticProps {
   defaultLocale?: undefined;
 }
 
+export async function getStaticPaths() {
+  const { TeamsPaths } = require("../../../admin/config");
+
+  return {
+    paths: TeamsPaths,
+    fallback: false,
+  };
+}
+
 export async function getStaticProps({ params }: GetStaticProps) {
   const { id } = params;
 
@@ -140,14 +149,5 @@ export async function getStaticProps({ params }: GetStaticProps) {
         ),
       },
     },
-  };
-}
-
-export async function getStaticPaths() {
-  const { TeamsPaths } = require("../../../admin/config");
-
-  return {
-    paths: TeamsPaths,
-    fallback: true,
   };
 }
