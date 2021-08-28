@@ -51,17 +51,15 @@ function CreateRanking() {
       const team_ratings = getTeamRatings(team.id);
       const winsDrawsLosses = getWinsDrawsLosses(team_ratings);
       const matches = team_ratings.length;
-      if (matches >= 30) {
-        const last_rating = team_ratings.pop();
-        const team_rate = {
-          ...team,
-          matches: matches,
-          Ro: last_rating.team_Ro,
-          Rn: last_rating.team_Rn,
-          ...winsDrawsLosses,
-        };
-        rankings.push(team_rate);
-      }
+      const last_rating = team_ratings.pop();
+      const team_rate = {
+        ...team,
+        matches: matches,
+        Ro: last_rating.team_Ro,
+        Rn: last_rating.team_Rn,
+        ...winsDrawsLosses,
+      };
+      rankings.push(team_rate);
     }
   });
 
