@@ -6,7 +6,7 @@
   --heavy-default: #f2f2f2;
   --heavy-dark: #000000;
   --button-active: #023db3;
-  --button-default: #cccccc;
+  --button-default: #ffffff;
   --button-hover: #dbdbdb;
   --positive-color: #016929;
   --negative-color: #a70000;
@@ -54,3 +54,5 @@ body {
 @import "./menu";
 @import "./list_teams";
 @import "./team";
+@import "./about";
+@import "./matches";

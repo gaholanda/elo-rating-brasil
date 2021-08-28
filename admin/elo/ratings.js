@@ -44,7 +44,6 @@ function CreateRanking() {
   let ranking_file = `${RatingFolder}/${file}.csv`;
   let rankings = [];
 
-  let fileExists = FS.existsSync(ranking_file);
   FS.writeFileSync(ranking_file, `id;Ro;Rn;matches;wins;draws;losses\n`);
 
   teams.map((team) => {

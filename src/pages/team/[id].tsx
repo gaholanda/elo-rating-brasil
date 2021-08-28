@@ -17,7 +17,8 @@ const Team: NextPage<TeamProps> = ({ team }) => {
 
   const labels = Array.from(
     { length: history.length },
-    (v, k) => history[k].date
+    (v, k) =>
+      `${history[k].date}\n${history[k].team_goals}x${history[k].opp_team_goals} ${history[k].opp_team_id}`
   );
 
   const chartData = Array.from(
@@ -134,8 +135,8 @@ export async function getStaticProps({ params }: GetStaticProps) {
         name: getTeam.name,
         rating: getTeamRating,
         history: getTeamHistory.slice(
-          getTeamHistory.length - 15,
-          getTeamHistory.length - 1
+          getTeamHistory.length - 6,
+          getTeamHistory.length
         ),
       },
     },
