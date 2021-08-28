@@ -13,17 +13,15 @@ interface TeamProps {
 }
 
 const Team: NextPage<TeamProps> = ({ team }) => {
-  const { history } = team;
-
   const labels = Array.from(
-    { length: history.length },
+    { length: team.history.length },
     (v, k) =>
-      `${history[k].date}\n${history[k].team_goals}x${history[k].opp_team_goals} ${history[k].opp_team_id}`
+      `${team.history[k].date}\n${team.history[k].team_goals}x${team.history[k].opp_team_goals} ${team.history[k].opp_team_id}`
   );
 
   const chartData = Array.from(
-    { length: history.length },
-    (v, k) => history[k].team_Rn
+    { length: team.history.length },
+    (v, k) => team.history[k].team_Rn
   );
 
   const data = {
