@@ -129,3 +129,4 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 31/07/2021;draw;INT;4463;0;0;CUI;1942;SERIE_A;4413
 08/08/2021;win;INT;4477;4;0;FLA;4649;SERIE_A;4478
 15/08/2021;win;INT;4543;4;2;FLU;4519;SERIE_A;4592
+22/08/2021;draw;INT;4657;2;2;SAN;4666;SERIE_A;4658
