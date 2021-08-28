@@ -1,0 +1,156 @@
+.matches {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--heavy-light);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+
+  &--back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    button {
+      cursor: pointer;
+      padding: 0.5rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      box-shadow: var(--box-shadow);
+      background-color: var(--button-default);
+      color: var(--alternative-color);
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.6rem;
+
+      &:hover {
+        background-color: var(--button-hover);
+      }
+    }
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--heavy-default);
+    padding: 1rem;
+
+    &-title {
+      flex: 1;
+      font-size: 1rem;
+      text-align: center;
+      color: var(--alternative-color);
+    }
+  }
+
+  &--teams {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+
+    &-team {
+      cursor: pointer;
+      display: block;
+      padding: 3rem 1rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3rem;
+      transition: opacity 0.5s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      width: inherit;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    &-title {
+      flex: 2;
+      text-align: center;
+    }
+  }
+
+  &--match {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--heavy-default);
+    width: 100%;
+
+    &:hover {
+      background-color: var(--heavy-default);
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      .tag::before {
+        display: flex;
+        align-items: center;
+        width: 2.7rem;
+        height: 10px;
+        font-size: 0.7rem;
+        padding: 0.2rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+      }
+
+      .win::before {
+        content: "Vitória";
+        background-color: var(--positive-color);
+        color: var(--heavy-light);
+      }
+
+      .draw::before {
+        content: "Empate";
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+      }
+
+      .loss::before {
+        content: "Derrota";
+        width: 3.1rem;
+        background-color: var(--negative-color);
+        color: var(--heavy-light);
+      }
+    }
+
+    &-logo {
+      display: block;
+      padding: 3rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3rem;
+    }
+  }
+}

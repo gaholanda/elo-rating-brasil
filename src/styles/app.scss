@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #009c3b;
+  --secondary-color: #ffdf00;
+  --alternative-color: #002776;
+  --heavy-light: #ffffff;
+  --heavy-default: #f2f2f2;
+  --heavy-dark: #000000;
+  --button-active: #023db3;
+  --button-default: #ffffff;
+  --button-hover: #dbdbdb;
+  --positive-color: #016929;
+  --negative-color: #a70000;
+  --box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+    0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  --modal-background: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--heavy-default);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  padding: 2rem 1rem;
+}
+
+.until-date {
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+
+  p {
+    padding: 1rem;
+  }
+}
+
+@import "./header";
+@import "./menu";
+@import "./list_teams";
+@import "./team";
+@import "./about";
+@import "./matches";

@@ -1,0 +1,33 @@
+.menu {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  border-top: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+
+  &--button {
+    flex: 1;
+    cursor: pointer;
+    border: none;
+    background-color: var(--button-default);
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--alternative-color);
+
+    &:hover {
+      background-color: var(--button-hover);
+    }
+
+    &-active,
+    &-active:hover {
+      background-color: var(--alternative-color);
+      color: var(--heavy-light);
+    }
+  }
+}

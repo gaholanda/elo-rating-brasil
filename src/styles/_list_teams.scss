@@ -1,0 +1,85 @@
+.list-teams {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--heavy-light);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+
+  &--header {
+    font-weight: bold;
+    color: var(--heavy-light);
+    text-align: center;
+    background-color: var(--secondary-color);
+  }
+
+  &--titles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding: 0.2rem 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+
+    &-pos,
+    &-rate,
+    &-diff {
+      flex: 1;
+    }
+
+    &-name {
+      flex: 4;
+    }
+  }
+
+  &--ratings {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--heavy-default);
+    }
+
+    &-pos,
+    &-rate,
+    &-diff {
+      flex: 1;
+    }
+
+    &-pos {
+      font-weight: bold;
+    }
+
+    &-name {
+      flex: 4;
+    }
+
+    &-diff {
+      font-size: 0.8rem;
+      &-positive {
+        color: var(--positive-color);
+      }
+
+      &-negative {
+        color: var(--negative-color);
+      }
+    }
+  }
+
+  &--separator {
+    border-bottom: 1px solid var(--heavy-default);
+  }
+}
