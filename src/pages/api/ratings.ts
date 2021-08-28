@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import CSV2JSON from "convert-csv-to-json";
-import {
-  RatingsData,
-  TeamsData,
-  TeamsRatingsFolder,
-} from "../../../admin/config";
+import { RatingsData, TeamsData, TeamsRatingsFolder } from "../../admin/config";
 import {
   MessageErrorType,
   RatingType,

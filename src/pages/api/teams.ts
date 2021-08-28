@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import CSV2JSON from "convert-csv-to-json";
-import { TeamsData } from "../../../admin/config";
+import { TeamsData } from "../../admin/config";
 import { MessageErrorType, TeamType } from "../../types";
 
 const Teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);

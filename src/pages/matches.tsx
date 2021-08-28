@@ -94,7 +94,7 @@ export default Matches;
 
 export async function getStaticProps() {
   const CSV2JSON = require("convert-csv-to-json");
-  const { TeamsData } = require("../../admin/config");
+  const { TeamsData } = require("../admin/config");
 
   const teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
 
