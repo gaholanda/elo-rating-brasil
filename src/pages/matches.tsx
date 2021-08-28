@@ -1,9 +1,9 @@
 import { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { TeamHistoryType, TeamType } from "../types";
+import { TeamHistoryType, TeamType, MatchHistoryType } from "../types";
 
 interface MatchesProps {
-  teams: Array<TeamType>;
+  teams: Array<MatchHistoryType>;
 }
 
 const Matches: NextPage<MatchesProps> = ({ teams }) => {
@@ -13,12 +13,8 @@ const Matches: NextPage<MatchesProps> = ({ teams }) => {
 
   useEffect(() => {
     if (team) {
-      fetch(`/api/ratings?id=${team.id}`).then((response) =>
-        response.json().then((data) => {
-          setShowMatches(true);
-          setMatches(data);
-        })
-      );
+      setShowMatches(true);
+      setMatches(teams.filter((_team) => _team.id == team.id)[0].history);
     }
   }, [team]);
 
@@ -94,13 +90,19 @@ export default Matches;
 
 export async function getStaticProps() {
   const CSV2JSON = require("convert-csv-to-json");
-  const { TeamsData } = require("../admin/config");
+  const { TeamsData, TeamsRatingsFolder } = require("../admin/config");
 
   const teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
+  const teamsWithHistory: Array<MatchHistoryType> = teams.map((team) => {
+    return {
+      ...team,
+      history: CSV2JSON.getJsonFromCsv(`${TeamsRatingsFolder}/${team.id}.csv`),
+    };
+  });
 
   return {
     props: {
-      teams: teams,
+      teams: teamsWithHistory,
     },
   };
 }
