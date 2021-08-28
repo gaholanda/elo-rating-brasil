@@ -83,18 +83,15 @@ function CalcRatings() {
         away_team.Ro = parseInt(away_team_ratings.pop().team_Rn);
       }
 
-      const home_Ro = home_team.Ro + Math.round(home_matches / 2);
-      const away_Ro = away_team.Ro + Math.round(away_matches / 2);
-
       home_team.Rn = CalcElo({
-        Ro: home_Ro,
+        Ro: home_team.Ro,
         K: parseInt(tournament.k),
         goals_for: parseInt(match.home_team_goals),
         goals_against: parseInt(match.away_team_goals),
         goals_diff:
           parseInt(match.home_team_goals) - parseInt(match.away_team_goals),
-        rating_one: home_Ro,
-        rating_two: away_Ro,
+        rating_one: home_team.Ro,
+        rating_two: away_team.Ro,
         playing_home: true,
       });
 
@@ -105,14 +102,14 @@ function CalcRatings() {
           ? "draw"
           : "loss"),
         (away_team.Rn = CalcElo({
-          Ro: away_Ro,
+          Ro: away_team.Ro,
           K: parseInt(tournament.k),
           goals_for: parseInt(match.away_team_goals),
           goals_against: parseInt(match.home_team_goals),
           goals_diff:
             parseInt(match.away_team_goals) - parseInt(match.home_team_goals),
-          rating_one: away_Ro,
-          rating_two: home_Ro,
+          rating_one: away_team.Ro,
+          rating_two: home_team.Ro,
         }));
       (away_team.result =
         parseInt(match.away_team_goals) > parseInt(match.home_team_goals)
@@ -122,11 +119,11 @@ function CalcRatings() {
           : "loss"),
         updateTeamRatings(
           home_team.id,
-          `${match.date};${home_team.result};${home_team.id};${home_Ro};${match.home_team_goals};${match.away_team_goals};${away_team.id};${away_Ro};${match.tournament_id};${home_team.Rn}`
+          `${match.date};${home_team.result};${home_team.id};${home_team.Ro};${match.home_team_goals};${match.away_team_goals};${away_team.id};${away_team.Ro};${match.tournament_id};${home_team.Rn}`
         );
       updateTeamRatings(
         away_team.id,
-        `${match.date};${away_team.result};${away_team.id};${away_Ro};${match.away_team_goals};${match.home_team_goals};${home_team.id};${home_Ro};${match.tournament_id};${away_team.Rn}`
+        `${match.date};${away_team.result};${away_team.id};${away_team.Ro};${match.away_team_goals};${match.home_team_goals};${home_team.id};${home_team.Ro};${match.tournament_id};${away_team.Rn}`
       );
     } else {
       return false;
