@@ -62,12 +62,17 @@ const About: NextPage = () => {
         <p className="about--develop-by">
           Desenvolvido por <strong>Glauber Holanda</strong>
           <span>
-            <a href="https://twitter.com/glauber_holanda" target="_blank">
+            <a
+              href="https://twitter.com/glauber_holanda"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img width={20} src="/images/twitter.png" alt="Twitter" />
             </a>{" "}
             <a
               href="https://github.com/gaholanda/elo-rating-brasil"
               target="_blank"
+              rel="noreferrer"
             >
               <img width={20} src="/images/github.png" alt="TwGithubitter" />
             </a>
