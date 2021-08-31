@@ -18,7 +18,10 @@ export const ListTeams: React.FC<ListTeamsProps> = ({ ratings }) => {
             Time
           </p>
           <p className="list-teams--titles-rate" title="Rating">
-            Rating
+            R
+          </p>
+          <p className="list-teams--titles-matches" title="Jogos">
+            J
           </p>
         </div>
       </div>
@@ -31,6 +34,7 @@ export const ListTeams: React.FC<ListTeamsProps> = ({ ratings }) => {
                   <p className="list-teams--team-pos">{i + 1}</p>
                   <p className="list-teams--team-name">{rating.name}</p>
                   <p className="list-teams--team-rate">{rating.Rn}</p>
+                  <p className="list-teams--team-matches">{rating.matches}</p>
                 </div>
               </Link>
               <div className="list-teams--separator"></div>
