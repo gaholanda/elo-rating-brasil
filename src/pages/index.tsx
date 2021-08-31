@@ -10,6 +10,13 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
   return (
     <div className="container">
       <ListTeams ratings={ratings} />
+      <div className="table-info">
+        <p>
+          <strong>Pos</strong> Posição, <strong>R</strong> Rating,{" "}
+          <strong>J</strong> Jogos
+        </p>
+        <p>Ratings atualizados até 31/08/2021</p>
+      </div>
     </div>
   );
 };
