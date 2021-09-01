@@ -1,6 +1,11 @@
 const FS = require("fs");
 const CSV2JSON = require("convert-csv-to-json");
-const { TeamsRatingsFolder, RatingFolder, TeamsData } = require("../config");
+const {
+  TeamsRatingsFolder,
+  RatingFolder,
+  TeamsData,
+  TeamsLevels,
+} = require("../config");
 
 function teamRatingsFileExists(team_id) {
   let file = `${TeamsRatingsFolder}/${team_id}.csv`;
@@ -63,8 +68,60 @@ function CreateRanking() {
     }
   });
 
-  const orderByRn = rankings.sort((a, b) => b.Rn - a.Rn);
-  orderByRn.map((rate) => {
+  const TeamsLevel1 = rankings
+    .filter((ranking) => ranking.matches <= TeamsLevels._1)
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsLevel2 = rankings
+    .filter(
+      (ranking) =>
+        ranking.matches > TeamsLevels._1 && ranking.matches <= TeamsLevels._2
+    )
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsLevel3 = rankings
+    .filter(
+      (ranking) =>
+        ranking.matches > TeamsLevels._2 && ranking.matches <= TeamsLevels._3
+    )
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsLevel4 = rankings
+    .filter(
+      (ranking) =>
+        ranking.matches > TeamsLevels._3 && ranking.matches <= TeamsLevels._4
+    )
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsLevel5 = rankings
+    .filter(
+      (ranking) =>
+        ranking.matches > TeamsLevels._4 && ranking.matches <= TeamsLevels._5
+    )
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsLevel6 = rankings
+    .filter(
+      (ranking) =>
+        ranking.matches > TeamsLevels._5 && ranking.matches <= TeamsLevels._6
+    )
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const TeamsWithMoreMatches = rankings
+    .filter((ranking) => ranking.matches > TeamsLevels._6)
+    .sort((a, b) => b.Rn - a.Rn);
+
+  const getRankings = [
+    ...TeamsWithMoreMatches,
+    ...TeamsLevel6,
+    ...TeamsLevel5,
+    ...TeamsLevel4,
+    ...TeamsLevel3,
+    ...TeamsLevel2,
+    ...TeamsLevel1,
+  ];
+
+  getRankings.map((rate) => {
     const content = `${rate.id};${rate.Ro};${rate.Rn};${rate.matches};${rate.wins};${rate.draws};${rate.losses}`;
     FS.appendFileSync(ranking_file, `${content}\n`);
   });

@@ -23,6 +23,25 @@ const About: NextPage = () => {
           apenas como um indicativo.
         </p>
 
+        <p className="about--text">
+          Os times estão ordenados com base no seu <strong>rating</strong> e no
+          seu <strong>nível</strong>. Cada nível tem como base a quantidade de
+          partidas disputadas. Isso é necessário para que os times sejam
+          comparados com aqueles que possuem um número de jogos parecido.
+        </p>
+
+        <h3>Níveis</h3>
+
+        <ol>
+          <li>1-20 partidas</li>
+          <li>21-40 partidas</li>
+          <li>41-60 partidas</li>
+          <li>61-80 partidas</li>
+          <li>81-100 partidas</li>
+          <li>101-120 partidas</li>
+          <li>+120 partidas</li>
+        </ol>
+
         <h3>Como é feito o cálculo?</h3>
         <br />
         <h3>Rn = Ro + K × (W - We)</h3>

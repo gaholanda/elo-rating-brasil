@@ -12,6 +12,15 @@
     width: 100%;
   }
 
+  ol {
+    display: block;
+    padding: 1rem;
+    margin: 0 auto 2rem;
+    li {
+      padding-top: 1rem;
+    }
+  }
+
   hr {
     display: block;
     width: 100%;

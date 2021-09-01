@@ -9,7 +9,20 @@ interface HomeProps {
 const Home: NextPage<HomeProps> = ({ ratings }) => {
   return (
     <div className="container">
-      <ListTeams ratings={ratings} />
+      <h1 className="table-title">Nível 7</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 7)} />
+      <h1 className="table-title">Nível 6</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 6)} />
+      <h1 className="table-title">Nível 5</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 5)} />
+      <h1 className="table-title">Nível 4</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 4)} />
+      <h1 className="table-title">Nível 3</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 3)} />
+      <h1 className="table-title">Nível 2</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 2)} />
+      <h1 className="table-title">Nível 1</h1>
+      <ListTeams ratings={ratings.filter((rating) => rating.level === 1)} />
       <div className="table-info">
         <p>
           <strong>Pos</strong>ição <strong>R</strong>ating <strong>J</strong>
@@ -25,7 +38,7 @@ export default Home;
 
 export async function getStaticProps() {
   const CSV2JSON = require("convert-csv-to-json");
-  const { RatingsData, TeamsData } = require("../admin/config");
+  const { RatingsData, TeamsData, GetTeamLevel } = require("../admin/config");
 
   const ratings: Array<RatingType> = CSV2JSON.getJsonFromCsv(RatingsData);
   const teams: Array<TeamType> = CSV2JSON.getJsonFromCsv(TeamsData);
@@ -34,6 +47,7 @@ export async function getStaticProps() {
     return {
       ...rating,
       name: teams.filter((team) => team.id === rating.id)[0].name,
+      level: GetTeamLevel(parseInt(rating.matches)),
     };
   });
 
