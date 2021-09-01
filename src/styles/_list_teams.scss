@@ -3,16 +3,24 @@
   flex-direction: column;
   width: 100%;
   background-color: var(--heavy-light);
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-radius: 6px;
   box-shadow: var(--box-shadow);
   overflow: hidden;
+  margin-bottom: 2rem;
 
   &--header {
     font-weight: bold;
     color: var(--heavy-light);
     text-align: center;
     background-color: var(--secondary-color);
+  }
+
+  &--level {
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--alternative-color);
+    color: var(--heavy-light);
+    padding: 0.5rem 0;
   }
 
   &--titles {

@@ -13,12 +13,11 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
   return (
     <div className="container">
       {levels.map((level) => (
-        <Fragment key={`level-${level}`}>
-          <h1 className="table-title">Nível {level}</h1>
-          <ListTeams
-            ratings={ratings.filter((rating) => rating.level === level)}
-          />
-        </Fragment>
+        <ListTeams
+          key={`level-${level}`}
+          ratings={ratings.filter((rating) => rating.level === level)}
+          level={level}
+        />
       ))}
       <div className="table-info">
         <p>
