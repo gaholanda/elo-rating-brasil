@@ -7,6 +7,7 @@ export type RatingType = {
   draws: string;
   losses: string;
   name?: string;
+  level?: number;
 };
 
 export type TeamType = {
