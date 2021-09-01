@@ -4,12 +4,14 @@ import { RatingType } from "../types";
 
 interface ListTeamsProps {
   ratings: Array<RatingType>;
+  level: number;
 }
 
-export const ListTeams: React.FC<ListTeamsProps> = ({ ratings }) => {
+export const ListTeams: React.FC<ListTeamsProps> = ({ ratings, level }) => {
   return (
     <div className="list-teams">
       <div className="list-teams--header">
+        <h1 className="list-teams--level">Nível {level}</h1>
         <div className="list-teams--titles">
           <p className="list-teams--titles-pos" title="Posição">
             Pos
