@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { Fragment } from "react";
 import { ListTeams } from "../components";
 import { RatingType, TeamType } from "../types";
 
@@ -7,22 +8,18 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ ratings }) => {
+  const levels = [7, 6, 5, 4, 3, 2, 1];
+
   return (
     <div className="container">
-      <h1 className="table-title">Nível 7</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 7)} />
-      <h1 className="table-title">Nível 6</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 6)} />
-      <h1 className="table-title">Nível 5</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 5)} />
-      <h1 className="table-title">Nível 4</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 4)} />
-      <h1 className="table-title">Nível 3</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 3)} />
-      <h1 className="table-title">Nível 2</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 2)} />
-      <h1 className="table-title">Nível 1</h1>
-      <ListTeams ratings={ratings.filter((rating) => rating.level === 1)} />
+      {levels.map((level) => (
+        <Fragment key={`level-${level}`}>
+          <h1 className="table-title">Nível {level}</h1>
+          <ListTeams
+            ratings={ratings.filter((rating) => rating.level === level)}
+          />
+        </Fragment>
+      ))}
       <div className="table-info">
         <p>
           <strong>Pos</strong>ição <strong>R</strong>ating <strong>J</strong>
