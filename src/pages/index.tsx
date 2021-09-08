@@ -24,7 +24,7 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
           <strong>Pos</strong>ição <strong>R</strong>ating <strong>J</strong>
           ogos
         </p>
-        <p>Ratings atualizados até 31/08/2021</p>
+        <p>Ratings atualizados até 08/09/2021</p>
       </div>
     </div>
   );
