@@ -14,6 +14,10 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="@glauber_holanda" />
           <meta
+            property="twitter:image"
+            content="https://elo-rating-brasil.vercel.app/images/BR.png"
+          />
+          <meta
             property="og:url"
             content="https://elo-rating-brasil.vercel.app/"
           />
