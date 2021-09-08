@@ -11,6 +11,21 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
           />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="@glauber_holanda" />
+          <meta
+            property="og:url"
+            content="https://elo-rating-brasil.vercel.app/"
+          />
+          <meta property="og:title" content="Elo Rating Brasil" />
+          <meta
+            property="og:description"
+            content="Classificação dos times que jogaram a Série A do Brasileiro, desde 2018, com base no sistema Elo."
+          />
+          <meta
+            property="og:image"
+            content="https://elo-rating-brasil.vercel.app/images/BR.png"
+          />
         </Head>
         <body>
           <Main />
