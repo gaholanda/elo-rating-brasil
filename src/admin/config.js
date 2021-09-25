@@ -2,12 +2,12 @@ const RootDatabaseFolder = "./src/admin/database";
 const MatchsCSVHeader =
   "date;home_team_id;home_team_goals;away_team_goals;away_team_id;tournament_id";
 const TeamsLevels = {
-  _1: 20,
-  _2: 40,
-  _3: 60,
-  _4: 80,
-  _5: 100,
-  _6: 120,
+  _1: 30,
+  _2: 50,
+  _3: 70,
+  _4: 90,
+  _5: 110,
+  _6: 130,
 };
 
 const GetTeamLevel = (matches) => {
