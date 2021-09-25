@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { Fragment } from "react";
 import { ListTeams } from "../components";
 import { RatingType, TeamType } from "../types";
 
@@ -20,11 +19,7 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
         />
       ))}
       <div className="table-info">
-        <p>
-          <strong>Pos</strong>ição <strong>R</strong>ating <strong>J</strong>
-          ogos
-        </p>
-        <p>Ratings atualizados até 13/09/2021</p>
+        <p>Ratings atualizados até 23/09/2021</p>
       </div>
     </div>
   );

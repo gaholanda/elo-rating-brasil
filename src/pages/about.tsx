@@ -33,13 +33,13 @@ const About: NextPage = () => {
         <h3>Níveis</h3>
 
         <ol>
-          <li>1-20 partidas</li>
-          <li>21-40 partidas</li>
-          <li>41-60 partidas</li>
-          <li>61-80 partidas</li>
-          <li>81-100 partidas</li>
-          <li>101-120 partidas</li>
-          <li>+120 partidas</li>
+          <li>1-30 partidas</li>
+          <li>31-50 partidas</li>
+          <li>51-70 partidas</li>
+          <li>71-90 partidas</li>
+          <li>91-110 partidas</li>
+          <li>111-130 partidas</li>
+          <li>+130 partidas</li>
         </ol>
 
         <h3>Como é feito o cálculo?</h3>
