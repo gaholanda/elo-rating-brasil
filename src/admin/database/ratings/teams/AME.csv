@@ -58,3 +58,5 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 11/09/2021;win;AME;1149;2;0;ATH;1036;SERIE_A;1183
 19/09/2021;draw;AME;1183;1;1;COR;1248;SERIE_A;1192
 22/09/2021;draw;AME;1192;0;0;SAO;1234;SERIE_A;1198
+26/09/2021;draw;AME;1198;1;1;FLA;1245;SERIE_A;1190
+02/10/2021;win;AME;1190;2;0;CUI;1268;SERIE_A;1282
