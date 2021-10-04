@@ -19,7 +19,7 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
         />
       ))}
       <div className="table-info">
-        <p>Ratings atualizados até 23/09/2021</p>
+        <p>Ratings atualizados até 03/10/2021</p>
       </div>
     </div>
   );
