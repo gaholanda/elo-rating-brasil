@@ -136,3 +136,5 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 22/09/2021;draw;SAO;1234;0;0;AME;1192;SERIE_A;1215
 25/09/2021;draw;SAO;1215;0;0;ATL;1458;SERIE_A;1234
 03/10/2021;draw;SAO;1234;1;1;CHA;918;SERIE_A;1198
+07/10/2021;draw;SAO;1198;1;1;SAN;1024;SERIE_A;1165
+11/10/2021;draw;SAO;1165;0;0;CUI;1175;SERIE_A;1166

@@ -134,3 +134,5 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 12/09/2021;loss;PAL;1245;1;3;FLA;1257;SERIE_A;1183
 18/09/2021;win;PAL;1183;2;0;CHA;988;SERIE_A;1220
 25/09/2021;loss;PAL;1220;1;2;COR;1226;SERIE_A;1171
+09/10/2021;loss;PAL;1171;2;4;RED;1141;SERIE_A;1103
+12/10/2021;draw;PAL;1103;0;0;BAH;1130;SERIE_A;1107
