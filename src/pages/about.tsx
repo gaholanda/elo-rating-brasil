@@ -26,8 +26,8 @@ const About: NextPage = () => {
         <p className="about--text">
           Os times estão ordenados com base no seu <strong>rating</strong> e no
           seu <strong>nível</strong>. Cada nível tem como base a quantidade de
-          partidas disputadas. Isso é necessário para que os times sejam
-          comparados com aqueles que possuem um número de jogos parecido.
+          partidas disputadas. Isso é necessário por conta das temporadas que os
+          times caem para a Série B. Quem joga mais na Série A tem mais peso.
         </p>
 
         <h3>Níveis</h3>

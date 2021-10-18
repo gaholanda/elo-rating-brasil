@@ -11,6 +11,9 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
 
   return (
     <div className="container">
+      <div className="table-info">
+        <p>Ratings atualizados até 13/10/2021</p>
+      </div>
       {levels.map((level) => (
         <ListTeams
           key={`level-${level}`}
@@ -18,9 +21,6 @@ const Home: NextPage<HomeProps> = ({ ratings }) => {
           level={level}
         />
       ))}
-      <div className="table-info">
-        <p>Ratings atualizados até 13/10/2021</p>
-      </div>
     </div>
   );
 };
