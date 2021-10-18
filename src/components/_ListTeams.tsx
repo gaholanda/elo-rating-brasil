@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import { RatingType } from "../types";
 
@@ -31,14 +30,12 @@ export const ListTeams: React.FC<ListTeamsProps> = ({ ratings, level }) => {
         {ratings.map((rating, i) => {
           return (
             <Fragment key={i}>
-              <Link href={`/team/${rating.id}`}>
-                <div className="list-teams--team">
-                  <p className="list-teams--team-pos">{i + 1}</p>
-                  <p className="list-teams--team-name">{rating.name}</p>
-                  <p className="list-teams--team-rate">{rating.Rn}</p>
-                  <p className="list-teams--team-matches">{rating.matches}</p>
-                </div>
-              </Link>
+              <div className="list-teams--team">
+                <p className="list-teams--team-pos">{i + 1}</p>
+                <p className="list-teams--team-name">{rating.name}</p>
+                <p className="list-teams--team-rate">{rating.Rn}</p>
+                <p className="list-teams--team-matches">{rating.matches}</p>
+              </div>
               <div className="list-teams--separator"></div>
             </Fragment>
           );

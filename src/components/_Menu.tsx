@@ -20,7 +20,7 @@ export const Menu: React.FC = () => {
   return (
     <div className="menu">
       <MenuItem href="/">Ratings</MenuItem>
-      <MenuItem href="/matches">Jogos</MenuItem>
+      <MenuItem href="/teams">Times</MenuItem>
       <MenuItem href="/about">Sobre</MenuItem>
     </div>
   );

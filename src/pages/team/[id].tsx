@@ -43,7 +43,7 @@ const Team: NextPage<TeamProps> = ({ team }) => {
   return (
     <div className="container">
       <div className="button-back">
-        <Link href="/">
+        <Link href="/teams">
           <button>Voltar</button>
         </Link>
       </div>
@@ -53,10 +53,7 @@ const Team: NextPage<TeamProps> = ({ team }) => {
         </div>
         <div className="team--content">
           <div className="team--info">
-            <div
-              className="team--logo"
-              style={{ backgroundImage: `url(/images/teams/${team.id}.png)` }}
-            />
+            <div className={`team--logo bg-team bg-team-${team.id}`} />
             <div className="team--stats">
               <div className="team--stats-data">
                 <span>Jogos</span>
