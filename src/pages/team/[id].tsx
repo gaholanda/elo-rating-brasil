@@ -1,6 +1,8 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { Line } from "react-chartjs-2";
+import { PageTitleDesc } from "../../components";
 
 import { RatingType, TeamHistoryType, TeamType } from "../../types";
 
@@ -42,6 +44,10 @@ const Team: NextPage<TeamProps> = ({ team }) => {
 
   return (
     <div className="container">
+      <PageTitleDesc
+        title={`${team.name} - Elo Rating Brasil`}
+        description={`Veja como tem sido a evolução do rating da equipe: ${team.name}.`}
+      />
       <div className="button-back">
         <Link href="/teams">
           <button>Voltar</button>

@@ -138,3 +138,4 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 06/10/2021;draw;INT;1230;0;0;CEA;1098;SERIE_A;1212
 10/10/2021;win;INT;1212;5;2;CHA;987;SERIE_A;1235
 13/10/2021;win;INT;1235;3;1;AME;1211;SERIE_A;1284
+17/10/2021;loss;INT;1284;0;1;PAL;1107;SERIE_A;1211

@@ -68,53 +68,26 @@ function CreateRanking() {
     }
   });
 
-  const TeamsLevel1 = rankings
-    .filter((ranking) => ranking.matches <= TeamsLevels._1)
-    .sort((a, b) => b.Rn - a.Rn);
+  const TeamsLevel1 = rankings.filter(
+    (ranking) => ranking.matches <= TeamsLevels._1
+  );
 
-  const TeamsLevel2 = rankings
-    .filter(
-      (ranking) =>
-        ranking.matches > TeamsLevels._1 && ranking.matches <= TeamsLevels._2
-    )
-    .sort((a, b) => b.Rn - a.Rn);
+  const TeamsLevel2 = rankings.filter(
+    (ranking) =>
+      ranking.matches > TeamsLevels._1 && ranking.matches <= TeamsLevels._2
+  );
 
-  const TeamsLevel3 = rankings
-    .filter(
-      (ranking) =>
-        ranking.matches > TeamsLevels._2 && ranking.matches <= TeamsLevels._3
-    )
-    .sort((a, b) => b.Rn - a.Rn);
+  const TeamsLevel3 = rankings.filter(
+    (ranking) =>
+      ranking.matches > TeamsLevels._2 && ranking.matches <= TeamsLevels._3
+  );
 
-  const TeamsLevel4 = rankings
-    .filter(
-      (ranking) =>
-        ranking.matches > TeamsLevels._3 && ranking.matches <= TeamsLevels._4
-    )
-    .sort((a, b) => b.Rn - a.Rn);
-
-  const TeamsLevel5 = rankings
-    .filter(
-      (ranking) =>
-        ranking.matches > TeamsLevels._4 && ranking.matches <= TeamsLevels._5
-    )
-    .sort((a, b) => b.Rn - a.Rn);
-
-  const TeamsLevel6 = rankings
-    .filter(
-      (ranking) =>
-        ranking.matches > TeamsLevels._5 && ranking.matches <= TeamsLevels._6
-    )
-    .sort((a, b) => b.Rn - a.Rn);
-
-  const TeamsWithMoreMatches = rankings
-    .filter((ranking) => ranking.matches > TeamsLevels._6)
-    .sort((a, b) => b.Rn - a.Rn);
+  const TeamsLevel4 = rankings.filter(
+    (ranking) =>
+      ranking.matches > TeamsLevels._3 && ranking.matches <= TeamsLevels._4
+  );
 
   const getRankings = [
-    ...TeamsWithMoreMatches,
-    ...TeamsLevel6,
-    ...TeamsLevel5,
     ...TeamsLevel4,
     ...TeamsLevel3,
     ...TeamsLevel2,
