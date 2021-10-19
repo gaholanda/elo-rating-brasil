@@ -1,13 +1,14 @@
 const RootDatabaseFolder = "./src/admin/database";
 const MatchsCSVHeader =
   "date;home_team_id;home_team_goals;away_team_goals;away_team_id;tournament_id";
+
+const MatchesBySeason = 38;
+
 const TeamsLevels = {
-  _1: 30,
-  _2: 50,
-  _3: 70,
-  _4: 90,
-  _5: 110,
-  _6: 130,
+  _1: MatchesBySeason,
+  _2: MatchesBySeason * 2,
+  _3: MatchesBySeason * 3,
+  _4: MatchesBySeason * 4,
 };
 
 const GetTeamLevel = (matches) => {
@@ -23,19 +24,7 @@ const GetTeamLevel = (matches) => {
     return 3;
   }
 
-  if (matches > TeamsLevels._3 && matches <= TeamsLevels._4) {
-    return 4;
-  }
-
-  if (matches > TeamsLevels._4 && matches <= TeamsLevels._5) {
-    return 5;
-  }
-
-  if (matches > TeamsLevels._5 && matches <= TeamsLevels._6) {
-    return 6;
-  }
-
-  return 7;
+  return 4;
 };
 
 module.exports = {

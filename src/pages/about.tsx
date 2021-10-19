@@ -24,24 +24,11 @@ const About: NextPage = () => {
         </p>
 
         <p className="about--text">
-          Os times estão ordenados com base no seu <strong>rating</strong> e no
-          seu <strong>nível</strong>. Cada nível tem como base a quantidade de
-          partidas disputadas. Isso é necessário por conta das temporadas que os
-          times caem para a Série B. Quem joga mais na Série A tem mais peso.
+          Os times estão ordenados com base no seu <strong>rating</strong> e na
+          quantidade de temporadas disputadas na Série A.
         </p>
 
-        <h3>Níveis</h3>
-
-        <ol>
-          <li>1-30 partidas</li>
-          <li>31-50 partidas</li>
-          <li>51-70 partidas</li>
-          <li>71-90 partidas</li>
-          <li>91-110 partidas</li>
-          <li>111-130 partidas</li>
-          <li>+130 partidas</li>
-        </ol>
-
+        <br />
         <h3>Como é feito o cálculo?</h3>
         <br />
         <h3>Rn = Ro + K × (W - We)</h3>

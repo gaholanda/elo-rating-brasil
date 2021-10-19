@@ -6,6 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="icon" href="/images/BR.png" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             rel="stylesheet"
