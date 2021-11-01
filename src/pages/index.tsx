@@ -13,7 +13,7 @@ const Home: NextPage<HomeProps> = ({ ratings, levels }) => {
   return (
     <div className="container">
       <div className="table-info">
-        <p>Ratings atualizados até 19/10/2021</p>
+        <p>Ratings atualizados até 31/10/2021</p>
       </div>
       {_levels.map((level) => (
         <ListTeams

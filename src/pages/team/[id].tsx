@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
 import { Line } from "react-chartjs-2";
 import { PageTitleDesc } from "../../components";
@@ -18,23 +17,25 @@ interface TeamProps {
 const Team: NextPage<TeamProps> = ({ team }) => {
   const { history } = team;
 
+  const lastFiveGames = history.slice(history.length - 6, history.length);
+
   const labels = Array.from(
-    { length: history.length },
+    { length: lastFiveGames.length },
     (v, k) =>
-      `${history[k].team_goals}x${history[k].opp_team_goals} ${history[k].opp_team_id}`
+      `${lastFiveGames[k].team_goals}x${lastFiveGames[k].opp_team_goals} ${lastFiveGames[k].opp_team_id}`
   );
 
-  const chartData = Array.from(
-    { length: history.length },
-    (v, k) => history[k].team_Rn
+  const chartDataLastFiveGames = Array.from(
+    { length: lastFiveGames.length },
+    (v, k) => lastFiveGames[k].team_Rn
   );
 
-  const data = {
+  const dataLastFiveGames = {
     labels: labels,
     datasets: [
       {
         label: "Rating",
-        data: chartData,
+        data: chartDataLastFiveGames,
         fill: false,
         backgroundColor: "#009c3b",
         borderColor: "#ffdf00",
@@ -80,8 +81,8 @@ const Team: NextPage<TeamProps> = ({ team }) => {
             </div>
           </div>
           <div className="team--chart">
-            <h3 className="team--chart-title">Últimos jogos</h3>
-            <Line data={data} width={400} height={400} />
+            <h3 className="team--chart-title">Últimos 5 jogos</h3>
+            <Line data={dataLastFiveGames} width={400} height={400} />
           </div>
         </div>
       </div>
@@ -152,10 +153,7 @@ export async function getStaticProps({ params }: GetStaticProps) {
         id: getTeam.id,
         name: getTeam.name,
         rating: getTeamRating,
-        history: getTeamHistory.slice(
-          getTeamHistory.length - 6,
-          getTeamHistory.length
-        ),
+        history: getTeamHistory,
       },
     },
   };
