@@ -63,3 +63,5 @@ date;result;team_id;team_Ro;team_goals;opp_team_goals;opp_team_id;opp_team_Ro;to
 09/10/2021;draw;ATG;1149;0;0;FLU;1171;SERIE_A;1152
 12/10/2021;loss;ATG;1152;0;1;RED;1222;SERIE_A;1112
 17/10/2021;win;ATG;1112;2;1;ATL;1426;SERIE_A;1189
+25/10/2021;win;ATG;1189;2;0;GRE;1025;SERIE_A;1216
+31/10/2021;loss;ATG;1216;0;2;SPO;1034;SERIE_A;1142
